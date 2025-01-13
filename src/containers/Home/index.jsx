@@ -63,7 +63,7 @@ function Home() {
                             <h1>{movie.title}</h1>
                             <p>{movie.overview}</p>
                             <div>
-                                <Button red onClick={() => navigate(`/detalhe/${movie.id}`)}>Assista agora</Button>
+                                <Button red onClick={() => navigate(`/detalhe/${movie.id}`)}>Detalhes</Button>
                                 <Button onClick={() => setShowModal(true)}>Assista o trailer</Button>
                             </div>
                         </Info>

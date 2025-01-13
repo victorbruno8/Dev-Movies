@@ -16,7 +16,7 @@ export const Container = styled.div`
     gap: 20px;
     height: 100vh;
     max-width: 1500px;
-    margin-top: -100px;
+    margin-top: -10px;
     
 `
 export const Background = styled.div`
@@ -85,7 +85,21 @@ export const Info = styled.div`
 export const ContainerMovies = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    margin: 0 0 150px 0;
+
+        iframe {
+            width: 50%;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
 `
  

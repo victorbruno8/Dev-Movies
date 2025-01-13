@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom"
 import SpanGenres from "../../components/SpanGenres"
 import Credits from "../../components/Credits"
 import { getImages } from "../../utils/getImages"
+import Slider from "../../components/Slider"
 
 function Detail() {
 
@@ -27,11 +28,11 @@ function Detail() {
                 getMovieCredits(id),
                 getMovieSimilar(id)
 
-            ]).then(([movie, videos, credits, similar]) => {
-                console.log({ movie, videos, credits, similar });
+            ]).then(([movie, movieVideos, credits, similar]) => {
+
 
                 setMovie(movie)
-                setMovieVideos(videos)
+                setMovieVideos(movieVideos)
                 setMovieCredits(credits)
                 setMovieSimilar(similar)
             })
@@ -69,7 +70,8 @@ function Detail() {
                     </Container>
 
                     <ContainerMovies>
-                    {movieVideos && movieVideos.map(video =>(
+
+                    {movieVideos && movieVideos.map( video => (
                                <div key={video.id}>
 
                                    <h4>{video.name}</h4>
@@ -78,7 +80,10 @@ function Detail() {
 
                                </div>
                          ))}
+
                     </ContainerMovies>
+
+                    {similar && <Slider info={similar} title="Similares" />}
 
                 </>
             )}

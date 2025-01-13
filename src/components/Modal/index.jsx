@@ -20,10 +20,10 @@ function Modal( {movieId, setShowModal} ) {
         <Background onClick={() => setShowModal(false)}>
             {movie && (
             <Container>
-                <iframe src={`https://www.youtube.com/embed/${movie?.key}`} title="Youtube video player" height="400px" width="100%"></iframe>
+                <iframe src={`https://www.youtube.com/embed/${movie.key}`} title="Youtube video player" height="400px" width="100%"></iframe>
             </Container>
             
-            )}
+            )}  
             <CLose  onClick={() => setShowModal(false)}>X</CLose>
 
         </Background>
